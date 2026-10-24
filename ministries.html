@@ -23,7 +23,7 @@
   <a class="brand" href="index.html" aria-label="Cotton Lane Baptist Church — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#B5502F"/><path d="M14 54V32a18 18 0 0 1 36 0v22" fill="none" stroke="#F7F0E4" stroke-width="3.5"/><path d="M32 22v24M23 30h18" stroke="#F7F0E4" stroke-width="4" stroke-linecap="round"/></svg><span class="brand__text"><span class="brand__name">Cotton Lane</span><span class="brand__sub">Baptist Church</span></span></a>
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
   <nav class="nav" id="nav" aria-label="Main">
-    <a href="index.html">Home</a><a href="visit.html">Visit</a><a href="ministries.html" aria-current="page">Ministries</a><a href="watch.html">Watch</a><a href="calendar.html">Calendar</a><a href="contact.html">Contact</a>
+    <a href="index.html">Home</a><a href="visit.html">Visit</a><a href="ministries.html" aria-current="page">Ministries</a>
     <a class="btn" href="visit.html">Plan a visit</a>
   </nav>
 </div></header>
@@ -40,21 +40,31 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="cards">
+    <div class="cards cards--wide">
       <article class="card reveal"><div class="card__icon" data-icon="book"></div><h3>Sunday School</h3><p class="card__when"><span data-text="sundaySchool">9:30 AM</span> · Sundays</p><p>Open the Bible and learn together before the worship service begins.</p></article>
       <article class="card reveal"><div class="card__icon" data-icon="sun"></div><h3>Worship Service</h3><p class="card__when"><span data-text="worship">10:30 AM</span> · Sundays</p><p>Our whole church family together for singing, prayer, and the preaching of God's Word.</p></article>
       <article class="card reveal"><div class="card__icon" data-icon="users"></div><h3>Young Adults</h3><p class="card__when" data-text="youngAdults">Mondays · 7:00 PM</p><p>A place for young adults to connect, ask real questions, and grow in faith together.</p></article>
       <article class="card reveal"><div class="card__icon" data-icon="cross"></div><h3>Men's Service</h3><p class="card__when" data-text="mens">Wednesdays · 6:00 PM</p><p>A midweek gathering for the men of the church to be encouraged and challenged.</p></article>
-      <article class="card reveal"><div class="card__icon" data-icon="sun"></div><h3>Women's Service</h3><p class="card__when" data-text="womens">Wednesdays · 6:30 PM</p><p>A midweek gathering for the women of the church to worship, learn, and support one another.</p></article>
+      <article class="card reveal"><div class="card__icon" data-icon="sun"></div><h3>Women's Service</h3><p class="card__when" data-text="womens">Wednesdays · 6:00 PM</p><p>A midweek gathering for the women of the church to worship, learn, and support one another.</p></article>
     </div>
   </div>
 </section>
 
-<section class="cta">
-  <div class="wrap reveal">
-    <h2>Want to get involved?</h2>
-    <p>Not sure which group fits? Send us a note and we'll point you in the right direction.</p>
-    <div class="cta__actions"><a class="btn btn--light" href="contact.html">Get in touch</a><a class="btn btn--ghost" href="calendar.html">See the calendar</a></div>
+<section class="section section--tint" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal stack">
+      <span class="eyebrow">Contact</span>
+      <h2>Call us.</h2>
+      <p class="lede">Questions, prayer requests, or planning to visit? Give us a call. We'd love to hear from you.</p>
+    </div>
+    <ul class="contact-list reveal">
+      <li data-if="phoneMain"><div class="card__icon" data-icon="phone"></div><div><small>Main line · Women's Bible</small><a data-href="tel:{phoneMain}" href="#" data-text="phoneMain"></a></div></li>
+      <li data-if="phoneMens"><div class="card__icon" data-icon="phone"></div><div><small>Men's Study</small><a data-href="tel:{phoneMens}" href="#" data-text="phoneMens"></a></div></li>
+      <li data-if="phoneYouth"><div class="card__icon" data-icon="phone"></div><div><small>Youth Service</small><a data-href="tel:{phoneYouth}" href="#" data-text="phoneYouth"></a></div></li>
+      <li data-if="address"><div class="card__icon" data-icon="pin"></div><div><small>Visit</small><a data-href="{mapsUrl}" href="visit.html" data-text="address"></a></div></li>
+      <li data-if="facebook"><div class="card__icon" data-icon="fb"></div><div><small>Facebook</small><a data-href="{facebook}" href="#" rel="noopener">Follow along</a></div></li>
+      <li data-if="instagram"><div class="card__icon" data-icon="ig"></div><div><small>Instagram</small><a data-href="{instagram}" href="#" rel="noopener">Follow along</a></div></li>
+    </ul>
   </div>
 </section>
 </main>
@@ -65,21 +75,23 @@
       <p>God is good. All the time. All the time? God is good.</p>
     </div>
     <div>
-      <h4>Gather with us</h4>
+      <h4>Weekly schedule</h4>
       <ul>
         <li>Sunday School · <span data-text="sundaySchool">9:30 AM</span></li>
         <li>Worship Service · <span data-text="worship">10:30 AM</span></li>
+        <li>Young Adults · <span data-text="youngAdults">Mondays · 7:00 PM</span></li>
+        <li>Men's Service · <span data-text="mens">Wednesdays · 6:00 PM</span></li>
+        <li>Women's Service · <span data-text="womens">Wednesdays · 6:00 PM</span></li>
         <li data-if="address"><a data-href="{mapsUrl}" href="visit.html"><span data-text="address"></span></a></li>
       </ul>
     </div>
     <div>
-      <h4>Explore</h4>
+      <h4>Call us</h4>
       <ul>
-        <li><a href="visit.html">Plan a visit</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="watch.html">Watch online</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="contact.html">Contact us</a></li>
+        <li data-if="phoneMain"><span>Main line</span><br><a data-href="tel:{phoneMain}" href="#" data-text="phoneMain"></a></li>
+        <li data-if="phoneMens"><span>Men's Study</span><br><a data-href="tel:{phoneMens}" href="#" data-text="phoneMens"></a></li>
+        <li data-if="phoneYouth"><span>Youth Service</span><br><a data-href="tel:{phoneYouth}" href="#" data-text="phoneYouth"></a></li>
+        <li><a href="ministries.html">All ministries</a></li>
         <li data-if="facebook"><a data-href="{facebook}" href="#" rel="noopener">Facebook</a></li>
         <li data-if="instagram"><a data-href="{instagram}" href="#" rel="noopener">Instagram</a></li>
       </ul>

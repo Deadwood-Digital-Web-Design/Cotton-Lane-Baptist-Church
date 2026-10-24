@@ -9,25 +9,18 @@ window.CLB = {
   worship: "10:30 AM",
   youngAdults: "Mondays · 7:00 PM",
   mens: "Wednesdays · 6:00 PM",
-  womens: "Wednesdays · 6:30 PM",
+  womens: "Wednesdays · 6:00 PM",
 
   // Where to find the church  (fill these in — they're hidden until you do)
   address: "",          // e.g. "123 Cotton Lane, Town, AZ 85000"
   mapsUrl: "",          // a Google Maps share link for "Get directions"
 
-  // How people reach the church  (shown publicly — leave "" to hide)
-  phone: "",            // e.g. "(555) 123-4567"
-  publicEmail: "",      // e.g. "hello@cottonlanebaptist.org"
+  // Phone numbers (shown publicly; leave "" to hide)
+  phoneMain: "(623) 595-0724",   // main line + Women's Bible
+  phoneMens: "(623) 297-0414",   // Men's Study
+  phoneYouth: "",                // Youth Service: add when you have it
+
+  // Optional extras (hidden while blank)
   facebook: "",         // full URL
   instagram: "",        // full URL
-
-  // Where the Contact form sends its message (it opens the visitor's email app).
-  // This is NOT shown on the page. It's the address that was already on the old form —
-  // change it to the church's real inbox.
-  formEmail: "dylant5323@gmail.com",
-
-  // Livestream / sermon video (YouTube video ID) and Google Calendar embed ID
-  youtubeId: "AjWfY7SnMBI",
-  calendarId: "6a222eeabec95ab36684f701790d4bc2ed25f771eba65b8906a61d5febbaa01d@group.calendar.google.com",
-  timezone: "America/Phoenix"
 };

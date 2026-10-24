@@ -72,47 +72,4 @@
     items.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ----- Watch page: YouTube embed ----- */
-  var yt = $("#yt");
-  if (yt && C.youtubeId) {
-    yt.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(C.youtubeId) + "?rel=0";
-  }
-
-  /* ----- Calendar page: Month / Agenda toggle ----- */
-  var cal = $("#cal");
-  if (cal && C.calendarId) {
-    var base = "https://calendar.google.com/calendar/embed?src=" + encodeURIComponent(C.calendarId) +
-      "&ctz=" + encodeURIComponent(C.timezone || "America/Phoenix") + "&bgcolor=%23ffffff&showTitle=0&showPrint=0&showCalendars=0";
-    var setMode = function (mode) {
-      cal.src = base + "&mode=" + mode;
-      $$(".seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.mode === mode); });
-    };
-    $$(".seg button").forEach(function (b) { b.addEventListener("click", function () { setMode(b.dataset.mode); }); });
-    setMode(window.matchMedia("(max-width: 700px)").matches ? "AGENDA" : "MONTH");
-    var open = $("#cal-open");
-    if (open) open.href = "https://calendar.google.com/calendar/u/0/embed?src=" + encodeURIComponent(C.calendarId);
-  }
-
-  /* ----- Contact form: opens the visitor's email app with the message filled in ----- */
-  var form = $("#contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (!C.formEmail) { alert("Sorry — the contact form isn't set up yet."); return; }
-      var d = new FormData(form);
-      var name = (d.get("first") + " " + d.get("last")).trim();
-      var body = [
-        "Name: " + name,
-        "How to reach me: " + d.get("reach"),
-        "Topic: " + d.get("topic"),
-        "",
-        d.get("message")
-      ].join("\n");
-      window.location.href = "mailto:" + C.formEmail +
-        "?subject=" + encodeURIComponent("Website message: " + d.get("topic") + " (" + name + ")") +
-        "&body=" + encodeURIComponent(body);
-      var ok = $("#form-ok");
-      if (ok) ok.hidden = false;
-    });
-  }
 })();

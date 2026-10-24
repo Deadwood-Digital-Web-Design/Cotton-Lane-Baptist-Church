@@ -23,7 +23,7 @@
   <a class="brand" href="index.html" aria-label="Cotton Lane Baptist Church — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#B5502F"/><path d="M14 54V32a18 18 0 0 1 36 0v22" fill="none" stroke="#F7F0E4" stroke-width="3.5"/><path d="M32 22v24M23 30h18" stroke="#F7F0E4" stroke-width="4" stroke-linecap="round"/></svg><span class="brand__text"><span class="brand__name">Cotton Lane</span><span class="brand__sub">Baptist Church</span></span></a>
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
   <nav class="nav" id="nav" aria-label="Main">
-    <a href="index.html">Home</a><a href="visit.html" aria-current="page">Visit</a><a href="ministries.html">Ministries</a><a href="watch.html">Watch</a><a href="calendar.html">Calendar</a><a href="contact.html">Contact</a>
+    <a href="index.html">Home</a><a href="visit.html" aria-current="page">Visit</a><a href="ministries.html">Ministries</a>
     <a class="btn" href="visit.html">Plan a visit</a>
   </nav>
 </div></header>
@@ -33,7 +33,7 @@
   <div class="wrap">
     <span class="eyebrow">Plan your visit</span>
     <h1>We'd love to meet you.</h1>
-    <p>Here's everything you need for your first Sunday, so you can walk in relaxed.</p>
+    <p>Here's everything you need for your first visit, so you can walk in relaxed.</p>
   </div>
   <div class="arcade" aria-hidden="true"></div>
 </section>
@@ -48,7 +48,7 @@
         <div class="schedule__row"><span class="schedule__name">Worship Service<span class="schedule__sub">Sundays</span></span><span class="schedule__time" data-text="worship">10:30 AM</span></div>
         <div class="schedule__row"><span class="schedule__name">Young Adults</span><span class="schedule__time" data-text="youngAdults">Mondays · 7:00 PM</span></div>
         <div class="schedule__row"><span class="schedule__name">Men's Service</span><span class="schedule__time" data-text="mens">Wednesdays · 6:00 PM</span></div>
-        <div class="schedule__row"><span class="schedule__name">Women's Service</span><span class="schedule__time" data-text="womens">Wednesdays · 6:30 PM</span></div>
+        <div class="schedule__row"><span class="schedule__name">Women's Service</span><span class="schedule__time" data-text="womens">Wednesdays · 6:00 PM</span></div>
       </div>
       <div class="info-card" data-if="address">
         <h3>Find us</h3>
@@ -70,12 +70,12 @@
 
 <section class="section section--tint">
   <div class="wrap split split--flip">
-    <div class="arch-photo arch-photo--sky reveal"><img src="img/sky.jpg" alt="The church building under a big sky with bright clouds" loading="lazy"></div>
+    <div class="arch-photo arch-photo--front reveal"><img src="img/front.jpg" alt="The front of Cotton Lane Baptist Church: stucco arches, a red tile roof and a freshly mowed lawn" loading="lazy"></div>
     <div class="stack reveal">
-      <span class="eyebrow">Not sure yet?</span>
-      <h2>Watch a service first.</h2>
-      <p class="lede">If you'd like a peek before you come, you can watch a service online from wherever you are.</p>
-      <p><a class="btn" href="watch.html"><span data-icon="play"></span>Watch online</a> &nbsp; <a class="btn btn--outline" href="contact.html">Ask us a question</a></p>
+      <span class="eyebrow">Questions?</span>
+      <h2>Give us a call.</h2>
+      <p class="lede">Not sure about something before you come? Call the main line and someone will help.</p>
+      <p><a class="btn" data-href="tel:{phoneMain}" href="ministries.html#contact"><span data-icon="phone"></span><span data-text="phoneMain">Call the church</span></a> &nbsp; <a class="btn btn--outline" href="ministries.html#contact">All phone numbers</a></p>
     </div>
   </div>
 </section>
@@ -87,21 +87,23 @@
       <p>God is good. All the time. All the time? God is good.</p>
     </div>
     <div>
-      <h4>Gather with us</h4>
+      <h4>Weekly schedule</h4>
       <ul>
         <li>Sunday School · <span data-text="sundaySchool">9:30 AM</span></li>
         <li>Worship Service · <span data-text="worship">10:30 AM</span></li>
+        <li>Young Adults · <span data-text="youngAdults">Mondays · 7:00 PM</span></li>
+        <li>Men's Service · <span data-text="mens">Wednesdays · 6:00 PM</span></li>
+        <li>Women's Service · <span data-text="womens">Wednesdays · 6:00 PM</span></li>
         <li data-if="address"><a data-href="{mapsUrl}" href="visit.html"><span data-text="address"></span></a></li>
       </ul>
     </div>
     <div>
-      <h4>Explore</h4>
+      <h4>Call us</h4>
       <ul>
-        <li><a href="visit.html">Plan a visit</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="watch.html">Watch online</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="contact.html">Contact us</a></li>
+        <li data-if="phoneMain"><span>Main line</span><br><a data-href="tel:{phoneMain}" href="#" data-text="phoneMain"></a></li>
+        <li data-if="phoneMens"><span>Men's Study</span><br><a data-href="tel:{phoneMens}" href="#" data-text="phoneMens"></a></li>
+        <li data-if="phoneYouth"><span>Youth Service</span><br><a data-href="tel:{phoneYouth}" href="#" data-text="phoneYouth"></a></li>
+        <li><a href="ministries.html">All ministries</a></li>
         <li data-if="facebook"><a data-href="{facebook}" href="#" rel="noopener">Facebook</a></li>
         <li data-if="instagram"><a data-href="{instagram}" href="#" rel="noopener">Instagram</a></li>
       </ul>
